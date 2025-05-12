@@ -1,16 +1,16 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js"
+    "start": "node api/server.js",
+    "dev": "nodemon api/server.js",
+    "build": "echo 'No build needed for Node.js'",
+    "vercel-build": "echo 'Vercel build completed'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "engines": {
+    "node": ">=18.x"
+  },
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cloudinary": "^2.6.0",
@@ -22,7 +22,8 @@
     "mongoose": "^8.14.0",
     "multer": "^1.4.5-lts.2",
     "serverless-http": "^3.2.0",
-    "stripe": "^18.0.0"
+    "stripe": "^18.0.0",
+    "@vercel/node": "^4.1.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
